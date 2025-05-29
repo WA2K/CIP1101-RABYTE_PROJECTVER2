@@ -1,10 +1,18 @@
+function formatPrice(price) {
+    if (typeof price === 'string') {
+        price = price.replace(/[^\d]/g, '');
+        price = parseInt(price, 10);
+    }
+    return '₱' + price.toLocaleString('en-PH', { maximumFractionDigits: 0 });
+}
+
 let id = parseInt(sessionStorage.getItem("selectedProduct"), 10);
 const filtered = product.find(element => element.productId === id);
 
 const box = document.getElementById("container");
 box.innerHTML = `
     <div class="breadcrumb">
-        <a href="try-homepage.html">Home</a> / 
+        <a href="../index.html">Home</a> / 
         <a href="gallery.html?type=${filtered.type}">${filtered.type}</a> / 
         <span>${filtered.name}</span>
     </div>
@@ -20,7 +28,7 @@ box.innerHTML = `
 
             <div class="brand-price">
                 <span class="brand">${filtered.brand}</span>
-                <span class="price">₱${filtered.price}</span>
+                <span class="price">${formatPrice(filtered.price)}</span>
             </div>
 
             <div class="product-meta">
@@ -41,7 +49,6 @@ box.innerHTML = `
                 </div>
             </div>
 
-            
             <button class="add-to-cart">
                 <i class="fa-solid fa-cart-plus"></i>
                 Add to Cart
@@ -104,4 +111,4 @@ window.addEventListener('click', (e) => {
 
 document.getElementById("acc").addEventListener("click", () => {
     window.location.href = "../html/login.html";
-}); 
+});
