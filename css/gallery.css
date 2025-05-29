@@ -592,13 +592,13 @@ body {
     font-family: "Kantumruy Pro", sans-serif;
     font-weight: 600;
     font-size: 16px;
-    color: #e53935;
+    color: #000000;
     padding: 0 15px;
     margin: 10px 0;
 }
 
 .prod-card .add-to-cart {
-    background-color: #4CAF50;
+    background-color: #00326b;
     color: white;
     text-align: center;
     padding: 4px 0;
@@ -610,7 +610,7 @@ body {
 }
 
 .prod-card .add-to-cart:hover {
-    background-color: #43a047;
+    background-color: #002147;
 }
 
 
@@ -696,7 +696,7 @@ body {
 }
 
 .add-to-cart {
-    background-color: #4CAF50;
+    background-color: #00326b;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -708,7 +708,7 @@ body {
 }
 
 .add-to-cart:hover {
-    background-color: #45a049;
+    background-color: #002147;
 }
 
 /* Responsive adjustments */
@@ -827,7 +827,7 @@ body {
 }
 
 .checkout-button{
-  background: #007BFF;
+  background: #00326b;
   color: white;
   padding: 0.5rem; /* Less vertical padding */
   height: 40px;
@@ -843,7 +843,7 @@ body {
 }
 
 .checkout-button:hover{
-  background: #0056b3;
+  background: #002147;
   transform: translateY(-2px);
 }
 
@@ -1376,7 +1376,7 @@ body {
 }
 
 .checkout-button{
-  background: #007BFF;
+  background: #00326b;
   color: white;
   height: 40px;
   padding: 0.5rem;
@@ -1392,7 +1392,7 @@ body {
 }
 
 .checkout-button:hover{
-  background: #0056b3;
+  background: #002147;
   transform: translateY(-2px);
 }
 
@@ -1462,4 +1462,25 @@ body {
 
 #f4{
     cursor: pointer;
+}
+
+.price-input-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.price-input-container input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 120px;
+    font-size: 14px;
+}
+
+.price-input-container input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
 }
