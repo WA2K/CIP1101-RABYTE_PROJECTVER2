@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Gallery</title>
+        <link rel="stylesheet" href="../css/gallery.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+         <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+         <!-- Bootstrap JS (for the carousel functionality) -->
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+         <!--Font for Icon-->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+         <link rel="icon" type="image/x-icon" href="../resources/Rabyte Mascot.ico">
+    </head>
+    <body>
+
+       <!-- === Navbar === -->
+        <header>
+            <nav class="navbar">
+                <div class="content">
+
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../resources/logo2.png" alt="Logo">
+                        </a>
+                    </div>
+                    
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="What are you looking for?" autocomplete="off"/>
+                        <button>
+                            <i class="fa-solid fa-search search-icon"></i>
+                        </button>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                    
+                    
+                    <div class="navbar-right">
+
+                        <!--Search icon for mobile-->
+                        <div class="icon search-toggle">
+                            <i class="fa-solid fa-search"></i>
+                        </div>
+
+
+                        <div class="icon" id="acc">
+                            <i class="fa-solid fa-user" id="profile-icon"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                        </div>
+                        <div class="icon">
+                            <a href="../html/aboutUs.html" class="no-link-style">
+                                <i class="fa-solid fa-circle-info" id="about-icon"></i>
+                             </a>
+                        </div>
+                    </div>
+
+                </div> 
+            </nav>
+        
+            <div class="mobile-search-container" style="display: none;">
+                <div class="mobile-search-input-wrapper">
+                    <input type="text" id="mobileSearchInput" placeholder="What are you looking for?" autocomplete="off"/>
+                    <button id="mobileSearchClear" aria-label="Clear search">&times;</button> <!-- X inside input -->
+                    <button><i class="fa-solid fa-search"></i></button> <!-- search button -->
+                </div>
+                <div class="search-results" id="mobileSearchResults"></div>
+            </div>
+        </header>
+          
+        <div class="main-container">
+            <!-- Filters Section -->
+            <div class="filters-section">
+                <h2>Categories</h2>
+                <div class="filter-group">
+                    <!-- Laptops Category -->
+                    <div class="category-group">
+                        <label class="checkbox-container"><strong>Laptop</strong>
+                            <input type="checkbox" id="laptop">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <!-- Peripherals Category -->
+                    <div class="category-group">
+                        <label class="checkbox-container"><strong>Peripheral</strong>
+                            <input type="checkbox" id="peripheral">
+                            <span class="checkmark"></span>
+                        </label>
+                        <div class="sub-types">
+                            <label class="checkbox-container">Keyboard
+                                <input type="checkbox" id="keyboard">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Mouse
+                                <input type="checkbox" id="mouse">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Speaker
+                                    <input type="checkbox" id="speaker">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Microphone
+                                    <input type="checkbox" id="microphone">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Headphone
+                                    <input type="checkbox" id="headphone">
+                                    <span class="checkmark"></span>
+                                </label>
+                        </div>
+                    </div>
+
+                    <!-- Gaming Category -->
+                    <div class="category-group">
+                        <label class="checkbox-container"><strong>Gaming</strong>
+                            <input type="checkbox" id="gaming">
+                            <span class="checkmark"></span>
+                        </label>
+                        <div class="sub-types">
+                            <label class="checkbox-container">Console
+                                <input type="checkbox" id="console">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Controller
+                                <input type="checkbox" id="controller">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Networking Category -->
+                    <div class="category-group">
+                        <label class="checkbox-container"><strong>Networking</strong>
+                            <input type="checkbox" id="networking">
+                            <span class="checkmark"></span>
+                        </label>
+                        <div class="sub-types">
+                            <label class="checkbox-container">Router
+                                <input type="checkbox" id="router">
+                                <span class="checkmark"></span>
+                            </label>
+                        <label class="checkbox-container">Switch
+                                <input type="checkbox" id="switch">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Netcard
+                                    <input type="checkbox" id="netcard">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">AP
+                                    <input type="checkbox" id="ap">
+                                    <span class="checkmark"></span>
+                                </label>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <h2>Maximum Price</h2>
+                <div class="filter-group price-range">
+                    <div class="range-values">
+                        <span id="max-price-value">₱200,000</span>
+                    </div>
+                    <div class="range-slider">
+                        <input type="text" min="0" max="200000" value="200000" class="slider" id="price-max">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Area -->
+            <!-- Products Section -->
+            <section id="product-section">
+                <div id="box-head" class="header-container">
+                    <!--Banner-->
+                    <div id="product-banner">
+                        <img src=""//ecommerce.datablitz.com.ph/cdn/shop/collections/pc_600x.png?v=1739177128 600w, //ecommerce.datablitz.com.ph/cdn/shop/collections/pc_800x.png?v=1739177128 800w, //ecommerce.datablitz.com.ph/cdn/shop/collections/pc_1000x.png?v=1739177128 1000w, //ecommerce.datablitz.com.ph/cdn/shop/collections/pc_1200x.png?v=1739177128 1200w, //ecommerce.datablitz.com.ph/cdn/shop/collections/pc_1500x.png?v=1739177128 1500w" sizes="1082px" srcset="//ecommerce.datablitz.com.ph/cdn/shop/collections/pc_600x.png?v=1739177128 600w, //ecommerce.datablitz.com.ph/cdn/shop/collections/pc_800x.png?v=1739177128 800w, //ecommerce.datablitz.com.ph/cdn/shop/collections/pc_1000x.png?v=1739177128 1000w, //ecommerce.datablitz.com.ph/cdn/shop/collections/pc_1200x.png?v=1739177128 1200w, //ecommerce.datablitz.com.ph/cdn/shop/collections/pc_1500x.png?v=1739177128 1500w">
+                    </div>
+
+                    <div id="toolbar">
+                        <div id="gallery-title">
+                            <h3>Showing n-m out of o</h3>
+                        </div>
+    
+                        <!-- Sorting Controls -->
+                        <div class="sorting-controls">
+                            <span>Sort by:</span>
+                            <select class="sort-select">
+                                <option value="best-selling">Best selling ▼</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="name-asc">Name: A to Z</option>
+                                <option value="name-desc">Name: Z to A</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="box" class="products-container"></div>
+            </section>
+
+            
+        </div>
+
+        <!-- Product Modal -->
+        <div id="productModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modalProductContent"></div>
+            </div>
+        </div>
+
+        <!-- Cart Modal -->
+        <div id="cartModal" class="cart-modal">
+            <div class="cart-modal-content">
+                <span class="close-cart" id="closeCartModal">&times;</span>
+                <h2>Your Cart</h2>
+                <br>
+                <div id="cartItemsContainer">
+                </div>
+            </div>
+        </div>
+
+        <!-- Item Added Modal -->
+        <div id="itemAdded" class="cart-modal">
+            <div class="cart-modal-content2">
+                <span class="close-cart" id="closeAddModal">&times;</span>
+                <div class="modal-body">
+                    <div class="checkmark-animation">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h3>Item Added Successfully!</h3>
+                    <p class="modal-product-name"></p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <!--Main Footer-->
+            <div id="primary-footer-links">
+                <div class="footer-container-primary">
+                    <!-- Mascot Container (smaller version) -->
+                    <div id="mascot-container">
+                        <img id="Mascot" src="../resources/Rabyte Mascot.png" alt="Rabyte Mascot">
+                    </div>
+
+                    <!-- Company Information -->
+                    <div id="footer-rabyte-information">
+                        <div class="footer-information-title">
+                            <h1>Rabyte</h1>
+                        </div>
+                        <div class="footer-information-content">
+                            <h6>Address:</h6>
+                            <p>1762 Antipolo, Rizal</p>
+                        </div>
+                        <div class="footer-information-content">
+                            <h6>Call Us:</h6>
+                            <p>(+63) 555-014</p>
+                        </div>
+                        <div class="footer-information-content">
+                            <h6>Email:</h6>
+                            <p>rabyte@contact.com</p>
+                        </div>
+                        <div class="footer-information-content">
+                            <h6>Work hours:</h6>
+                            <p>8AM - 10PM, Monday - Saturday</p>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div id="footer-useful-links" class="footer-link">
+                        <div class="footer-link-title">
+                            <h5>Categories</h5>
+                        </div>
+                        <div class="footer-link-list">
+                            <ul>
+                                <li id="f1">Laptop</li>
+                                <li id="f2">Peripheral</li>
+                                <li id="f3">Gaming</li>
+                                <li id="f4">Networking</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-link">
+                        <div class="footer-link-title">
+                            <h5>Quick Links</h5>
+                        </div>
+                        <div class="footer-link-list">
+                            <ul>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../html/aboutUs.html">About Us</a></li>
+                                <li><a href="../html/gallery.html">Browse</a></li>
+                                <li><a href="../html/login.html">Account</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright (simplified) -->
+                <div class="footer-copyright">
+                    <p>&copy; 2023 Rabyte. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- vvv === SITE FUNCTIONALITIES === vvv -->
+        <script src="../scripts/searchBar.js"></script>
+        <script src="../scripts/cart.js"></script>
+        <script src="../scripts/galleryFunc.js"></script>
+        <script src="../scripts/login.js"></script>
+        <script src="../scripts/footer.js"></script>
+    </body>
+</html>

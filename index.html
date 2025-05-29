@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <title>Homepage</title>
+
+         <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+         <!-- Bootstrap JS (for the carousel functionality) -->
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+         <!--Font for Icon-->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="resources/Rabyte Mascot.ico">
+    </head>
+    <body>
+
+        <header>
+            <!-- === Navbar === -->
+            <nav class="navbar">
+                <div class="content">
+
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="resources/logo2.png" alt="Logo">
+                        </a>
+                    </div>
+                    
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="What are you looking for?" autocomplete="off"/>
+                        <button>
+                            <i class="fa-solid fa-search search-icon"></i>
+                        </button>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                    
+                    
+                    <div class="navbar-right">
+
+                        <!--Search icon for mobile-->
+                        <div class="icon search-toggle">
+                            <i class="fa-solid fa-search"></i>
+                        </div>
+
+
+                        <div class="icon" id="acc">
+                            <i class="fa-solid fa-user" id="profile-icon"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                        </div>
+                        <div class="icon">
+                            <a href="html/aboutUs.html" class="no-link-style">
+                                <i class="fa-solid fa-circle-info" id="about-icon"></i>
+                             </a>
+                        </div>
+                    </div>
+
+                </div> 
+            </nav>
+        
+            <div class="mobile-search-container" style="display: none;">
+                <div class="mobile-search-input-wrapper">
+                    <input type="text" id="mobileSearchInput" placeholder="What are you looking for?" autocomplete="off"/>
+                    <button id="mobileSearchClear" aria-label="Clear search">&times;</button> <!-- X inside input -->
+                    <button><i class="fa-solid fa-search"></i></button> <!-- search button -->
+                </div>
+                <div class="search-results" id="mobileSearchResults"></div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hot Picks --> 
+            <section class="section">
+                <div id="Hot_Picks">
+
+                    <div class="section-header">
+                        <h1>Upcoming</h1>
+                    </div>
+
+                    <div class="hot-pick-nav">
+                        <button class="hot-pick-arrow left">&#10094;</button>
+                        <button class="hot-pick-arrow right">&#10095;</button>
+                    </div>
+
+        
+                    <div class="image-container-hot-picks">
+                        <div class="hot-pick">
+                            <img loading="lazy" class="image--fade-in" data-widths="[300]" data-sizes="auto" alt="" src="https://i.pinimg.com/736x/d8/15/54/d81554e844f0bdf239852d68cc6b04e0.jpg">
+                        </div>
+
+                        <div class="hot-pick">
+                            <img loading="lazy" class="image--fade-in" data-widths="[300]" data-sizes="auto" alt="" src="https://i.pinimg.com/736x/63/26/50/632650d4a548158dfc3120f93ca95ce1.jpg">
+                        </div>
+
+                        <div class="hot-pick">
+                            <img loading="lazy" class="image--fade-in" data-widths="[300]" data-sizes="auto" alt="" src="https://i.pinimg.com/736x/74/f8/ea/74f8eaa43ee33fc30d33ba67a55c074d.jpg">
+                        </div>
+
+                        <div class="hot-pick">
+                            <img loading="lazy" class="image--fade-in" data-widths="[300]" data-sizes="auto" alt="" src="https://i.pinimg.com/736x/8e/dd/5a/8edd5abb9a3ad6070ce87d2470cd5428.jpg">
+
+                        </div>
+
+                        <div class="hot-pick">
+                            <img loading="lazy" class="image--fade-in" data-widths="[300]" data-sizes="auto" alt="" src="https://i.pinimg.com/736x/75/30/8a/75308aa33c44c5d585eb1c58adb7483c.jpg">
+                        </div>
+
+                        <div class="hot-pick">
+                            <img loading="lazy" class="image--fade-in" data-widths="[300]" data-sizes="auto" alt="" src="https://i.pinimg.com/736x/b8/d4/39/b8d439f518eba5428b5d804e11a34192.jpg">
+                        </div>
+
+                        <!--May or may not be removed-->
+                        <div class="hot-pick">
+                            <img loading="lazy" class="image--fade-in" data-widths="[300]" data-sizes="auto" alt="" src="https://i.pinimg.com/736x/0d/91/2d/0d912d1d3a59ae523b23819c1035ba14.jpg">
+                        </div>
+
+                        <div class="hot-pick">
+                            <img loading="lazy" class="image--fade-in" data-widths="[300]" data-sizes="auto" alt="" src="https://i.pinimg.com/736x/ae/71/e2/ae71e271b19fb722b9a263d0dee82b41.jpg">
+                        </div>
+
+                        <div class="hot-pick">
+                            <img loading="lazy" class="image--fade-in" data-widths="[300]" data-sizes="auto" alt="" src="https://i.pinimg.com/736x/28/a8/5c/28a85cf4740c514db1248a81b4763e26.jpg">
+                        </div>
+
+                        <div class="hot-pick">
+                            <img loading="lazy" class="image--fade-in" data-widths="[300]" data-sizes="auto" alt="" src="https://i.pinimg.com/736x/26/bb/b9/26bbb9b209cc5ad3f89fbb5f956c5ff4.jpg">
+                        </div>
+
+                        <div class="hot-pick">
+                            <img loading="lazy" class="image--fade-in" data-widths="[300]" data-sizes="auto" alt="" src="https://i.pinimg.com/736x/89/ef/90/89ef907ade80435e083d2675393f515c.jpg">
+                        </div>
+
+                        <div class="hot-pick">
+                            <img loading="lazy" class="image--fade-in" data-widths="[300]" data-sizes="auto" alt="" src="https://i.pinimg.com/736x/42/f3/36/42f3361fe23f14f2acee4fd962802837.jpg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- New Arrivals -->
+            <section class="section">
+                <div id="New_Arrivals">
+                    <div class="section-header">
+                        <h1>New Arrivals</h1>
+                    </div>
+
+                    <div class="new-arrivals-nav">
+                        <button class="new-arrivals-arrow left">&#10094;</button>
+                        <button class="new-arrivals-arrow right">&#10095;</button>
+                    </div>
+
+                    <div class="item-containers">
+                        <div id="product-1" class="product-item-vertical">
+                            <img loading="lazy" class="product-item__primary-image">
+                            <div class="product-item__info">
+                                <div class="product-item__price-list">
+                                    <span class="price"></span>
+                                </div>
+                                <a href="#" class="product-item__title"></a>
+                            </div>
+                        </div>
+
+                        <div id="product-2" class="product-item-vertical">
+                            <img loading="lazy" class="product-item__primary-image">
+                            <div class="product-item__info">
+                                <div class="product-item__price-list">
+                                    <span class="price"></span>
+                                </div>
+                                <a href="#" class="product-item__title"></a>
+                            </div>
+                        </div>
+
+                        <div id="product-3" class="product-item-vertical">
+                            <img loading="lazy" class="product-item__primary-image">
+                            <div class="product-item__info">
+                                <div class="product-item__price-list">
+                                    <span class="price"></span>
+                                </div>
+                                <a href="#" class="product-item__title"></a>
+                            </div>
+                        </div>
+
+                        <div id="product-4" class="product-item-vertical">
+                            <img loading="lazy" class="product-item__primary-image">
+                            <div class="product-item__info">
+                                <div class="product-item__price-list">
+                                    <span class="price"></span>
+                                </div>
+                                <a href="#" class="product-item__title"></a>
+                            </div>
+                        </div>
+
+                        <div id="product-5" class="product-item-vertical">
+                            <img loading="lazy" class="product-item__primary-image">
+                            <div class="product-item__info">
+                                <div class="product-item__price-list">
+                                    <span class="price"></span>
+                                </div>
+                                <a href="#" class="product-item__title"></a>
+                            </div>
+                        </div>
+
+                        <div id="product-6" class="product-item-vertical">
+                            <img loading="lazy" class="product-item__primary-image">
+                            <div class="product-item__info">
+                                <div class="product-item__price-list">
+                                    <span class="price"></span>
+                                </div>
+                                <a href="#" class="product-item__title"></a>
+                            </div>
+                        </div>
+
+                        <div id="product-7" class="product-item-vertical">
+                            <img loading="lazy" class="product-item__primary-image">
+                            <div class="product-item__info">
+                                <div class="product-item__price-list">
+                                    <span class="price"></span>
+                                </div>
+                                <a href="#" class="product-item__title"></a>
+                            </div>
+                        </div>
+
+                        <div id="product-8" class="product-item-vertical">
+                            <img loading="lazy" class="product-item__primary-image">
+                            <div class="product-item__info">
+                                <div class="product-item__price-list">
+                                    <span class="price"></span>
+                                </div>
+                                <a href="#" class="product-item__title"></a>
+                            </div>
+                        </div>
+
+                        <div id="product-9" class="product-item-vertical">
+                            <img loading="lazy" class="product-item__primary-image">
+                            <div class="product-item__info">
+                                <div class="product-item__price-list">
+                                    <span class="price"></span>
+                                </div>
+                                <a href="#" class="product-item__title"></a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </section>
+
+            <!--Wayne-->
+            <!--Dynamic Category-->
+            <section class="section">
+            <div id="Dynamic_Category">
+                <div id="carouselExampleFade" class="carousel slide carousel-slide">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                    <div class="box">
+                        <div class="cat-pic" id="laptop">
+                        <img src="https://pimwp.s3-accelerate.amazonaws.com/2021/09/laptop1.png" alt="Laptop Banner">
+                        
+                        <div class="cat-overlay-text">
+                            <span class="cat-title">Laptops</span>
+                            <span class="cat-sub">Explore this collection →</span>
+                        </div>
+
+                        </div>
+                        <div class="cat-cards-row">
+                        <div class="cat-card" id="laptop1">
+                            <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-13-digitalmat-gallery-1-202503?wid=728&hei=666&fmt=png-alpha&.v=1739590110917" alt="MacBook Air 13-inch">
+                            <p class="cat-text-title">MacBook Air 13-inch</p>
+                            <p class="cat-text-price">₱64,990.00</p>
+                        </div>
+                        <div class="cat-card" id="laptop2">
+                            <img src="https://store.gigatechph.com/cdn/shop/files/HPIA46S6PA_front_2048x.jpg?v=1716271030" alt="HP 15S-EQ2323AU/ RYZEN 3-5300U">
+                            <p class="cat-text-title">HP 15S-EQ2323AU/ RYZEN 3-5300U</p>
+                            <p class="cat-text-price">₱23,990.00</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="carousel-item">
+                    <div class="box">
+                        <div class="cat-pic" id="peripheral">
+                        <img src="https://cdn.mos.cms.futurecdn.net/SFMNrAjBHtBD5HmCxx6Wic.jpg" alt="Peripheral Banner">
+
+                        <div class="cat-overlay-text">
+                            <span class="cat-title">Peripherals</span>
+                            <span class="cat-sub">Explore this collection →</span>
+                        </div>
+
+                        </div>
+                        <div class="cat-cards-row">
+                        <div class="cat-card" id="perp1">
+                            <img src="https://d1rlzxa98cyc61.cloudfront.net/catalog/product/1/8/181909_2023_1.jpg?auto=webp&format=pjpg&width=640" alt="LOGITECH G413 TKL KEYBOARD">
+                            <p class="cat-text-title">LOGITECH G413 TKL KEYBOARD</p>
+                            <p class="cat-text-price">₱4,145.00</p>
+                        </div>
+                        <div class="cat-card" id="perp2">
+                            <img src="https://gamextreme.ph/cdn/shop/products/1_61f1deee-454f-470e-9ed3-b690d86f034b.png?v=1654657905" alt="RAZER BARRACUDA X (2022) BLACK">
+                            <p class="cat-text-title">RAZER BARRACUDA X (2022) BLACK</p>
+                            <p class="cat-text-price">₱4,795.00</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="carousel-item">
+                    <div class="box">
+                        <div class="cat-pic" id="networking">
+                        <img src="https://cdn.thewirecutter.com/wp-content/media/2024/07/wifirouters-2048px-3572.jpg" alt="Networking Banner">
+
+                        <div class="cat-overlay-text">
+                            <span class="cat-title">Routers</span>
+                            <span class="cat-sub">Explore this collection →</span>
+                        </div>
+
+                        </div>
+                        <div class="cat-cards-row">
+                        <div class="cat-card" id="net1">
+                            <img src="https://www.netxl.com/_next/image/?url=https%3A%2F%2Fstorage.googleapis.com%2Fnxl-content%2Fubiquiti%2Fusw-ultra-60w-11.jpg&w=2560&q=75" alt="UBIQUITI USW-Ultra-60W Switch">
+                            <p class="cat-text-title">UBIQUITI USW-Ultra-60W Switch</p>
+                            <p class="cat-text-price">₱9,250.00</p>
+                        </div>
+                        <div class="cat-card" id="net2">
+                            <img src="https://store.zyxel.com/media/catalog/category/img_xmg1915-18ep_p_1000x1000_1.jpg" alt="ZYXEL GS1915-8EP 8-port GbE Smart Managed Switch">
+                            <p class="cat-text-title">ZYXEL GS1915-8EP 8-port GbE Smart Managed Switch</p>
+                            <p class="cat-text-price">₱9,200.00</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="carousel-item">
+                    <div class="box">
+                        <div class="cat-pic" id="gaming">
+                        <img src="https://cdn.thewirecutter.com/wp-content/media/2023/05/gamingconsoles-2048px-00730-3x2-1.jpg" alt="Gaming Banner" id="gaming-banner">
+                        
+                            <div class="cat-overlay-text">
+                                <span class="cat-title">Consoles</span>
+                                <span class="cat-sub">Explore this collection →</span>
+                            </div>
+                    
+                        </div>
+                        <div class="cat-cards-row">
+                        <div class="cat-card" id="game1">
+                            <img src="https://ecommerce.datablitz.com.ph/cdn/shop/products/81dYzGN3YKL._SL1500_700x.png?v=1676904260" alt="WII ARCADE FIGHTER">
+                            <p class="cat-text-title">WII ARCADE FIGHTER</p>
+                            <p class="cat-text-price">₱1,395.00</p>
+                        </div>
+                        <div class="cat-card" id="game2">
+                            <img src="https://i.pinimg.com/736x/10/f1/f9/10f1f9dec6cc12e8419378807b32d04b.jpg" alt="Sony Playstation PS5 30th Anniversary Edition">
+                            <p class="cat-text-title">Sony Playstation PS5 30th Anniversary Edition</p>
+                            <p class="cat-text-price">₱39,990.00</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+
+                <div class="carousel-nav">
+                    <button class="carousel-arrow left">&#10094;</button>
+                    <button class="carousel-arrow right">&#10095;</button>
+                </div>
+
+
+                </div>
+            </div>
+            </section>
+
+
+            <section class="section">
+                    <!--Companies-->
+                <div id="Company-Names">
+                    <div class="companies-grid">
+                        <div class="company-card" style="background-image: url('https://file.hstatic.net/1000129940/file/razer_official_store_banner_ca704cbf3c9e40be861c14fd3420c9e6.png');">
+                            <div class="company-name">Razer</div>
+                            <button class="shop-now" id="razer">Shop Now</button>
+                        </div>
+                        <div class="company-card" style="background-image: url('https://www.itechtics.com/wp-content/uploads/2022/09/Logitech-G-Hub-Download.jpg');">
+                            <div class="company-name">Logitech</div>
+                            <button class="shop-now" id="logitech">Shop Now</button>
+                        </div>
+                        <div class="company-card" style="background-image: url('https://ae01.alicdn.com/kf/S404c4e043f814bd9b6ffeb170c9617fcf.jpg');">
+                            <div class="company-name">Redragon</div>
+                            <button class="shop-now" id="rd">Shop Now</button>
+                        </div>
+                        <div class="company-card" style="background-image: url('https://www.gigahertz.com.ph/cdn/shop/collections/msi-634941_1024x1024.jpg?v=1721026186');">
+                            <div class="company-name">MSI</div>
+                            <button class="shop-now" id="msi">Shop Now</button>
+                        </div>
+                        <div class="company-card" style="background-image: url('https://www.stormforcegaming.co.uk/wp-content/uploads/2022/12/Full-Size-Banner-ICUE-Blog-1200x675.jpg');">
+                            <div class="company-name">CORSAIR</div>
+                            <button class="shop-now" id="corsair">Shop Now</button>
+                        </div>
+                        <div class="company-card" style="background-image: url('https://www.asus.com/campaign/tuf-gaming/upload/kv/20210825024915_m1.jpg');">
+                            <div class="company-name">TUF</div>
+                            <button class="shop-now" id="tuf">Shop Now</button>
+                        </div>
+                    </div>    
+                </div>
+            </section>
+
+            <!-- Cart Modal -->
+            <div id="cartModal" class="cart-modal">
+                <div class="cart-modal-content">
+                    <span class="close-cart" id="closeCartModal">&times;</span>
+                    <h2>Your Cart</h2>
+                    <br>
+                    <div id="cartItemsContainer">
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        
+        <footer>
+            <!--Companies Qualities-->
+            <section class="qualities">
+                <div class="qualities-container" class="container">
+                    <div class="quality-box">
+                        <div class="quality-content">
+                            <h3 class="quality-title">Your Most Trusted Store</h3>
+                            <p class="quality-text">100% All Brand New & Original. Shop with confidence! We guarantee that all our products are brand-new and original, sourced from authorized distributors.</p>
+                        </div>
+                    </div>
+            
+                    <div class="quality-box">
+                        <div class="quality-content">
+                            <h3 class="quality-title">Fast Shipping Nationwide</h3>
+                            <p class="quality-text">Ships in 24 hours! Express and Same-Day Delivery within Metro Manila! Enjoy quick and reliable shipping across the country, with express and same-day delivery options in Metro Manila.</p>
+                        </div>
+                    </div>
+            
+                    <div class="quality-box">
+                        <div class="quality-content">
+                            <h3 class="quality-title">100% Safe and Secure</h3>
+                            <p class="quality-text">All Transactions are Fully Encrypted with State of the Art Technology! Shop worry-free with our secure checkout process, ensuring your data and payments are fully protected.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!--Main Footer-->
+            <div id="primary-footer-links">
+                <div class="footer-container-primary">
+                    <!-- Mascot Container (smaller version) -->
+                    <div id="mascot-container">
+                        <img id="Mascot" src="resources/Rabyte Mascot.png" alt="Rabyte Mascot">
+                    </div>
+
+                    <!-- Company Information -->
+                    <div id="footer-rabyte-information">
+                        <div class="footer-information-title">
+                            <h1>Rabyte</h1>
+                        </div>
+                        <div class="footer-information-content">
+                            <h6>Address:</h6>
+                            <p>1762 Antipolo, Rizal</p>
+                        </div>
+                        <div class="footer-information-content">
+                            <h6>Call Us:</h6>
+                            <p>(+63) 555-014</p>
+                        </div>
+                        <div class="footer-information-content">
+                            <h6>Email:</h6>
+                            <p>rabyte@contact.com</p>
+                        </div>
+                        <div class="footer-information-content">
+                            <h6>Work hours:</h6>
+                            <p>8AM - 10PM, Monday - Saturday</p>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div id="footer-useful-links" class="footer-link">
+                        <div class="footer-link-title">
+                            <h5>Categories</h5>
+                        </div>
+                        <div class="footer-link-list">
+                            <ul>
+                                <li id="f1">Laptop</li>
+                                <li id="f2">Peripheral</li>
+                                <li id="f3">Gaming</li>
+                                <li id="f4">Networking</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-link">
+                        <div class="footer-link-title">
+                            <h5>Quick Links</h5>
+                        </div>
+                        <div class="footer-link-list">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="html/aboutUs.html">About Us</a></li>
+                                <li><a href="html/gallery.html">Browse</a></li>
+                                <li><a href="html/login.html">Account</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright (simplified) -->
+                <div class="footer-copyright">
+                    <p>&copy; 2023 Rabyte. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+            
+        <!-- vvv === SITE FUNCTIONALITIES === vvv -->
+        <script src="scripts/searchBarHomepage.js"></script>
+        <script src="scripts/cartHomepage.js"></script>
+        <script src="scripts/homepageFunc.js"></script>
+        <script src="scripts/loginHomepage.js"></script>
+        <script src="scripts/footerHomepage.js"></script>
+    </body>
+</html>
